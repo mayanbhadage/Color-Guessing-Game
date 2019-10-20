@@ -2,14 +2,11 @@
 
 
 //Colors for our square
-var colors = [
-    "rgb(255, 0, 0)",
-    "rgb(255, 255, 0)",
-    "rgb(0, 255, 0)",
-    "rgb(0, 255, 255)",
-    "rgb(0, 0, 255)",
-    "rgb(255, 0 , 255)"
-];
+var colors = generateRandomColors(6);
+
+//Selecting the H1
+
+var h1 = document.querySelector("h1");
 
 //Selecting squares
 var squares = document.querySelectorAll(".square");
@@ -18,7 +15,7 @@ var pickedColor = pickColor();
 //Selecting the span colorDisplay
 var colorDisplay = document.querySelector("#colorDisplay");
 //Selecting the message
-var messageDisplay = document.querySelector("#message");
+var messageDisplay = document.querySelector("#message"); 
 // Setting the display on html
 colorDisplay.textContent = pickedColor;
 
@@ -27,6 +24,10 @@ colorDisplay.textContent = pickedColor;
 
 function changeColor(color)
 {
+
+    // Also changing the h1 color
+
+    h1.style.backgroundColor = color;
     // loop through all the square
     for (let i = 0; i < squares.length; i++) {
         // change the color of square to the given color
@@ -75,4 +76,33 @@ function pickColor()
 {
     var index = Math.floor(Math.random() * colors.length); // Pick random num from 0 to length of array
     return colors[index]; 
+}
+
+function generateRandomColors(num)
+{
+    //Create an Empty Array
+    var result = []
+    //Add num random colors to the array
+    for(var i = 0; i < num ; i++)
+    {
+       color = randomColor();
+        // push into array
+        result.push(color);
+    }
+    // Return the array
+    return result;
+}
+
+function randomColor()
+{
+    // return a randomly generated color
+    //Generate three Random INT for R G B
+
+    var R = Math.floor(Math.random() * 256) // Floor that why 256 
+    var G = Math.floor(Math.random() * 256) // Floor that why 256 
+    var B = Math.floor(Math.random() * 256) // Floor that why 256 
+
+    var result = "rgb("+ R +", " +G+", "+B+")";
+ 
+    return result;
 }
