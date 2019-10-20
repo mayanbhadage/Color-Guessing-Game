@@ -1,0 +1,37 @@
+
+/* Setting the background color */
+body {
+    background-color: #232323; 
+}
+
+/* Styling the square(Answers) */
+.square
+{
+    width: 30%;                                /* 30 % of the parent element */
+    background-color: purple;
+    padding-bottom: 30%; 
+    float: left;                               /* make it arrange inline*/
+    margin: 1.66%;                             /* margin between the squares*/
+}
+
+#container{
+    margin: 0 auto;                             /* Center the squares  0  in top and botton of container and auto on left and right*/
+    max-width: 600px;                           /* Max width of the container to make it small */
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+#div_message{
+    color: white;
+    text-align: center;
+
+}
