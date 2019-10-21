@@ -2,6 +2,8 @@
 /* Setting the background color */
 body {
     background-color: #232323; 
+    margin: 0;
+    font-family: Helvetica, sans-serif;
 }
 
 /* Styling the square(Answers) */
@@ -12,26 +14,78 @@ body {
     padding-bottom: 30%; 
     float: left;                               /* make it arrange inline*/
     margin: 1.66%;                             /* margin between the squares*/
+    border-radius: 10%;
+    transition: background 0.5s;
 }
 
 #container{
-    margin: 0 auto;                             /* Center the squares  0  in top and botton of container and auto on left and right*/
+    margin: 20px auto;                             /* Center the squares  0  in top and botton of container and auto on left and right*/
     max-width: 600px;                           /* Max width of the container to make it small */
 }
 
 h1{
     color: white;
+    background-color: steelblue;
     text-align: center;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom:20px;
+
+    
 }
 
 
-h3 {
+h2 {
     color: white;
     text-align: center;
+    margin: 0;
+    background-color: steelblue;
 }
 
-#div_message{
-    color: white;
+#stripe{
+    background-color: white;
+    height: 30px;
     text-align: center;
 
 }
+
+.selected{
+    background-color:steelblue;
+    color : white;
+}
+
+#colorDisplay{
+    font-size: 250%;
+    font-weight: 100;
+    text-transform: uppercase;
+    
+}
+button:hover {
+    color: white;
+    background: steelblue;
+}
+button {
+
+    border: none;
+    background-color: inherit;
+    height: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all, 0.5s;
+    outline: none;
+}
+
+#message{
+    display: inline-block;
+    width: 20% ;
+
+    color: steelblue; 
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: inherit;
+
+}
+
